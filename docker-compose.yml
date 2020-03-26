@@ -36,6 +36,7 @@ acmeair-mainservice-java:
   build: ../acmeair-mainservice-java/
   environment:
     - LICENSE=accept
+#    - IBM_JAVA_OPTIONS=-XX:+UseJITServer -XX:JITServerAddress=mucked1.fyre.ibm.com -XX:JITServerTimeout:30000
   mem_limit: 512m
 
 acmeair-authservice-java:
@@ -45,6 +46,7 @@ acmeair-authservice-java:
   build: ../acmeair-authservice-java/
   environment:
     - LICENSE=accept
+#    - IBM_JAVA_OPTIONS=-XX:+UseJITServer -XX:JITServerAddress=mucked1.fyre.ibm.com -XX:JITServerTimeout:30000
   mem_limit: 512m
 
 acmeair-bookingservice-java:
@@ -55,6 +57,7 @@ acmeair-bookingservice-java:
   environment:
     - LICENSE=accept
     - MONGO_HOST=acmeair-booking-db
+#    - IBM_JAVA_OPTIONS=-XX:+UseJITServer -XX:JITServerAddress=mucked1.fyre.ibm.com -XX:JITServerTimeout:30000
   volumes_from:
     - acmeair-booking-db
   mem_limit: 512m
@@ -67,6 +70,7 @@ acmeair-customerservice-java:
   environment:
     - LICENSE=accept
     - MONGO_HOST=acmeair-customer-db
+#    - IBM_JAVA_OPTIONS=-XX:+UseJITServer -XX:JITServerAddress=mucked1.fyre.ibm.com -XX:JITServerTimeout:30000
   volumes_from:
     - acmeair-customer-db
   mem_limit: 512m
@@ -79,6 +83,7 @@ acmeair-flightservice-java:
   environment:
     - LICENSE=accept
     - MONGO_HOST=acmeair-flight-db
+#    - IBM_JAVA_OPTIONS=-XX:+UseJITServer -XX:JITServerAddress=mucked1.fyre.ibm.com -XX:JITServerTimeout:30000
   volumes_from:
     - acmeair-flight-db
   mem_limit: 512m
